@@ -5,7 +5,7 @@ use yii\db\Migration;
 /**
  * Handles the creation of table `article`.
  */
-class m170402_003052_create_article_table extends Migration
+class m170329_153714_create_article_table extends Migration
 {
     /**
      * @inheritdoc
@@ -13,7 +13,7 @@ class m170402_003052_create_article_table extends Migration
     public function up()
     {
         $this->createTable('article',[
-            'id'=> $this->primaryKey(),
+           'id'=> $this->primaryKey(),
             'title'=>$this->string(),
             'description'=> $this->text(),
             'content'=> $this->text(),
@@ -26,6 +26,8 @@ class m170402_003052_create_article_table extends Migration
 
         ]);
     }
+
+
     /**
      * @inheritdoc
      */
