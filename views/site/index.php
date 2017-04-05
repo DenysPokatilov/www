@@ -100,7 +100,7 @@ use yii\widgets\LinkPager;
                            <?php foreach ($categories as $category):?>
                             <li>
                                 <a href="#"><?= $category->title?></a>
-                                <span class="post-count pull-right">(???)</span>
+                                <span class="post-count pull-right">(????)</span>
                             </li>
                             <?php endforeach;?>
                         </ul>
