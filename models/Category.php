@@ -41,8 +41,12 @@ class Category extends \yii\db\ActiveRecord
         ];
     }
     public  static function getAll(){
-        return Category::find()->all();
+        return self::find()->all();
     }
 
+    public  function getArticleCountsByCategory($category_id){
+            return Article::find()->where(['category_id'=>$category_id])->count();
 
+    }
 }
+
