@@ -154,26 +154,17 @@ class SiteController extends Controller
 
     public function actionCategory($id)
     {
-        // build a DB query to get all articles with status = 1
-        $query = Article::find()->where(['category_id'=>$id]);
-
-// get the total number of articles (but do not fetch the article data yet)
-        $count = $query->count();
-
-// create a pagination object with the total count
-        $pagination = new Pagination(['totalCount' => $count, 'pageSize' =>3]);
-
-// limit the query using the pagination and retrieve the articles
-        $articles = $query->offset($pagination->offset)
-            ->limit($pagination->limit)
-            ->all();
-
-        $data['articles'] = $articles;
-        $data['pagination'] = $pagination;
+        $data= Category::getArticlesByCategory($id);
+        $popular = Article::getPopular();
+        $recent = Article::getRecent();
+        $categories = Category::getAll();
 
         return $this->render('category',[
             'articles'=>$data['articles'],
             'pagination'=>$data['pagination'],
+            'popular' => $popular,
+            'recent' => $recent,
+            'categories' => $categories,
         ]);
     }
 }
