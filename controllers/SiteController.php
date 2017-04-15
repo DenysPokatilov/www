@@ -112,7 +112,7 @@ class SiteController extends Controller
             $model->load(Yii::$app->request->post());
             if($model->saveComment($id))
             {
-
+                Yii::$app->getSession()->setFlash('comment','Your comment will be added after modaration of admin!');
                 return $this->redirect(['site/view','id'=>$id]);
             }
         }
@@ -134,7 +134,7 @@ class SiteController extends Controller
         $popular = Article::getPopular();
         $recent = Article::getRecent();
         $categories = Category::getAll();
-        $comments = $article->comments;
+        $comments = $article->getArticleComments();
         $commentForm = new CommentForm();
 
         return $this->render('single', [
