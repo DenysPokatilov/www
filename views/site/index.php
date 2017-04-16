@@ -36,7 +36,7 @@ use yii\widgets\LinkPager;
                             </div>
                             <div class="social-share">
                                 <span class="social-share-title pull-left text-capitalize">By <a
-                                            href="#">Rubel</a> On <?= $article->getDate(); ?></span>
+                                            href="#"><?= $article->author->name?></a> On <?= $article->getDate(); ?></span>
                                 <ul class="text-center pull-right">
                                     <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a>
                                     </li><?= (int)$article->viewed ?>
@@ -61,14 +61,13 @@ use yii\widgets\LinkPager;
                         <?php foreach ($popular as $article): ?>
                             <div class="popular-post">
 
-
-                                <a href="#" class="popular-img"><img src="<?= $article->getImage(); ?>" alt="">
+                                <a href="<?= Url::toRoute(['/site/view', 'id' => $article->id]) ?>" class="popular-img"><img src="<?= $article->getImage(); ?>" alt="">
 
                                     <div class="p-overlay"></div>
                                 </a>
 
                                 <div class="p-content">
-                                    <a href="#" class="text-uppercase"><?= $article->title ?></a>
+                                    <a href="<?= Url::toRoute(['/site/view', 'id' => $article->id]) ?>" class="text-uppercase"><?= $article->title ?></a>
                                     <span class="p-date"><?= $article->getDate(); ?></span>
 
                                 </div>
@@ -84,12 +83,12 @@ use yii\widgets\LinkPager;
 
                                 <div class="media">
                                     <div class="media-left">
-                                        <a href="#" class="popular-img"><img src="<?= $article->getImage(); ?>" alt="">
+                                        <a href="<?= Url::toRoute(['/site/view', 'id' => $article->id]) ?>" class="popular-img"><img src="<?= $article->getImage(); ?>" alt="">
                                             <div class="p-overlay"></div>
                                         </a>
                                     </div>
                                     <div class="p-content">
-                                        <a href="#" class="text-uppercase"><?= $article->title; ?></a>
+                                        <a href="<?= Url::toRoute(['/site/view', 'id' => $article->id]) ?>" class="text-uppercase"><?= $article->title; ?></a>
                                         <span class="p-date"><?= $article->date; ?></span>
                                     </div>
                                 </div>
@@ -104,7 +103,7 @@ use yii\widgets\LinkPager;
                             <?php foreach ($categories as $category):
                                 ?>
                                 <li>
-                                    <a href="#"><?= $category->title ?></a>
+                                    <a href="<?= Url::toRoute(['/site/category', 'id'=>$article->category->id])?>"><?= $category->title ?></a>
                                     <span class="post-count pull-right">(<?= $category->getArticleCountsByCategory($category->id); ?>
                                         )</span>
                                 </li>

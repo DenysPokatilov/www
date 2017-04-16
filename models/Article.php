@@ -154,7 +154,7 @@ class Article extends \yii\db\ActiveRecord
         $count = $query->count();
 
 // create a pagination object with the total count
-        $pagination = new Pagination(['totalCount' => $count, 'pageSize' =>4]);
+        $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 4]);
 
 // limit the query using the pagination and retrieve the articles
         $articles = $query->offset($pagination->offset)
@@ -173,26 +173,37 @@ class Article extends \yii\db\ActiveRecord
 
     public static function getRecent()
     {
-       return Article::find()->orderBy('date asc')->limit(4)->all();
+        return Article::find()->orderBy('date asc')->limit(4)->all();
     }
 
-    public  function saveArticle(){
+    public function saveArticle()
+    {
         $this->user_id = Yii::$app->user->id;
-       return $this->save();
+        return $this->save();
     }
 
     public function getComments()
     {
-        return $this->hasMany(Comment::className(), ['article_id'=>'id']);
+        return $this->hasMany(Comment::className(), ['article_id' => 'id']);
     }
 
     public function getArticleComments()
     {
-        return $this->getComments()->where(['status'=>1])->all();
+        return $this->getComments()->where(['status' => 1])->all();
     }
 
+    public function getAuthor()
+    {
+        return $this->hasOne(User::className(), ['id' => 'user_id']);
+    }
+
+    public function viewedCounter()
+    {
+        $this->viewed +=1;
+        return $this->save(false);
 
 
+    }
 
 
 }

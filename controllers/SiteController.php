@@ -136,6 +136,7 @@ class SiteController extends Controller
         $categories = Category::getAll();
         $comments = $article->getArticleComments();
         $commentForm = new CommentForm();
+        $article->viewedCounter();
 
         return $this->render('single', [
             'article' => $article,
@@ -143,7 +144,8 @@ class SiteController extends Controller
             'recent' => $recent,
             'categories' => $categories,
             'comments' => $comments,
-            'commentForm' => $commentForm,
+            'commentForm' => $commentForm,ed
+
         ]);
     }
 

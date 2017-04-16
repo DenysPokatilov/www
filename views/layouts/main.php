@@ -38,7 +38,7 @@ PublicAsset::register($this);
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><img src="/public/images/logo.jpg" alt=""></a>
+                <a class="navbar-brand" href="/"><img src="/public/images/1.jpg" alt="" style="width: 100px; margin:0"></a>
             </div>
 
 
@@ -79,26 +79,24 @@ PublicAsset::register($this);
         <div class="row">
             <div class="col-md-4">
                 <aside class="footer-widget">
-                    <div class="about-img"><img src="/public/images/logo2.png" alt=""></div>
-                    <div class="about-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed voluptua. At vero eos et
-                        accusam et justo duo dlores et ea rebum magna text ar koto din.
+                    <div class="about-img"><img src="/public/images/1.jpg" alt=""></div>
+                    <div class="about-content"> Сайт был слеплен на основе фреймворка YII2 ( по тотариалам из YouTube) как дипломный проект на сдачу Шкоденко Тарасу, преподающему в PHP-Academy.
                     </div>
                     <div class="address">
-                        <h4 class="text-uppercase">contact Info</h4>
+                        <h4 class="text-uppercase">Контактная информация</h4>
 
-                        <p> 14529/12 NK Streets, DC, KZ</p>
+                        <p>Покатилов Денис</p>
 
-                        <p> Phone: +123 456 78900</p>
+                        <p> Phone: (+38) 0930977555</p>
 
-                        <p>mytreasure.com</p>
+                        <p></p>
                     </div>
                 </aside>
             </div>
 
             <div class="col-md-4">
                 <aside class="footer-widget">
-                    <h3 class="widget-title text-uppercase">Testimonials</h3>
+                    <h3 class="widget-title text-uppercase">Отзывы</h3>
 
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
                         <!--Indicator-->
@@ -111,18 +109,15 @@ PublicAsset::register($this);
                             <div class="item active">
                                 <div class="single-review">
                                     <div class="review-text">
-                                        <p>Lorem ipsum dolor sit amet, conssadipscing elitr, sed diam nonumy eirmod
-                                            tempvidunt ut labore et dolore magna aliquyam erat,sed diam voluptua. At
-                                            vero eos et accusam justo duo dolores et ea rebum.gubergren no sea takimata
-                                            magna aliquyam eratma</p>
+                                        <p>Ты будешь первым кто оставит отзыв</p>
                                     </div>
                                     <div class="author-id">
                                         <img src="/public/images/author.png" alt="">
 
                                         <div class="author-text">
-                                            <h4>Sophia</h4>
+                                            <h4>Mr. Z</h4>
 
-                                            <h4>CEO, ReadyTheme</h4>
+                                            <h4>WEB Developer</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -130,18 +125,15 @@ PublicAsset::register($this);
                             <div class="item">
                                 <div class="single-review">
                                     <div class="review-text">
-                                        <p>Lorem ipsum dolor sit amet, conssadipscing elitr, sed diam nonumy eirmod
-                                            tempvidunt ut labore et dolore magna aliquyam erat,sed diam voluptua. At
-                                            vero eos et accusam justo duo dolores et ea rebum.gubergren no sea takimata
-                                            magna aliquyam eratma</p>
+                                        <p> Maybe you gonna be first!</p>
                                     </div>
                                     <div class="author-id">
                                         <img src="/public/images/author.png" alt="">
 
                                         <div class="author-text">
-                                            <h4>Sophia</h4>
+                                            <h4>Mr. Y</h4>
 
-                                            <h4>CEO, ReadyTheme</h4>
+                                            <h4>Web Codding</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -149,18 +141,16 @@ PublicAsset::register($this);
                             <div class="item">
                                 <div class="single-review">
                                     <div class="review-text">
-                                        <p>Lorem ipsum dolor sit amet, conssadipscing elitr, sed diam nonumy eirmod
-                                            tempvidunt ut labore et dolore magna aliquyam erat,sed diam voluptua. At
-                                            vero eos et accusam justo duo dolores et ea rebum.gubergren no sea takimata
-                                            magna aliquyam eratma</p>
+                                        <p>
+                                            Vous serez le premier à écrire un avis</p>
                                     </div>
                                     <div class="author-id">
                                         <img src="/public/images/author.png" alt="">
 
                                         <div class="author-text">
-                                            <h4>Sophia</h4>
+                                            <h4>Mr. X</h4>
 
-                                            <h4>CEO, ReadyTheme</h4>
+                                            <h4>Junior-Trainee</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -172,16 +162,16 @@ PublicAsset::register($this);
             </div>
             <div class="col-md-4">
                 <aside class="footer-widget">
-                    <h3 class="widget-title text-uppercase">Custom Category Post</h3>
+                    <h3 class="widget-title text-uppercase">Trainee </h3>
 
 
                     <div class="custom-post">
                         <div>
-                            <a href="#"><img src="/public/images/footer-img.png" alt=""></a>
+                            <a href="#"><img src="/public/images/Denys.jpg" style="width: 350px" alt=""></a>
                         </div>
                         <div>
-                            <a href="#" class="text-uppercase">Home is peaceful Place</a>
-                            <span class="p-date">February 15, 2016</span>
+                            <a href="https://www.facebook.com/denys.pokatilov" class="text-uppercase">Find me On FaceBook</a>
+                            <!--<span class="p-date">February 15, 2016</span>-->
                         </div>
                     </div>
                 </aside>
@@ -192,8 +182,8 @@ PublicAsset::register($this);
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="text-center">&copy; 2015 <a href="#">Treasure PRO, </a> Built with <i
-                                class="fa fa-heart"></i> by <a href="#">okatilov Denys</a>
+                    <div class="text-center">&copy; 2017 <a href="#"> </a> Built with <i
+                                class="fa fa-heart"></i> by <a href="https://www.facebook.com/denys.pokatilov">Pokatilov Denys</a>
                     </div>
                 </div>
             </div>
