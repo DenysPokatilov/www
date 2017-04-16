@@ -80,7 +80,8 @@ PublicAsset::register($this);
             <div class="col-md-4">
                 <aside class="footer-widget">
                     <div class="about-img"><img src="/public/images/1.jpg" alt=""></div>
-                    <div class="about-content"> Сайт был слеплен на основе фреймворка YII2 ( по тотариалам из YouTube) как дипломный проект на сдачу Шкоденко Тарасу, преподающему в PHP-Academy.
+                    <div class="about-content"> Сайт был слеплен на основе фреймворка YII2 ( по тотариалам из YouTube)
+                        как дипломный проект на сдачу Шкоденко Тарасу, преподающему в PHP-Academy.
                     </div>
                     <div class="address">
                         <h4 class="text-uppercase">Контактная информация</h4>
@@ -164,13 +165,16 @@ PublicAsset::register($this);
                 <aside class="footer-widget">
                     <h3 class="widget-title text-uppercase">Trainee </h3>
 
-
                     <div class="custom-post">
                         <div>
-                            <a href="#"><img src="/public/images/Denys.jpg" style="width: 350px" alt=""></a>
+                            <a href="https://www.facebook.com/denys.pokatilov"><img src="/public/images/Denys.jpg" style="width: 350px" alt=""></a>
                         </div>
                         <div>
-                            <a href="https://www.facebook.com/denys.pokatilov" class="text-uppercase">Find me On FaceBook</a>
+                            <a href="https://www.facebook.com/denys.pokatilov" class="text-uppercase">Find me On
+                                FaceBook </a>
+                            <a download href="/public/images//DenysPokatilovWebDeveloper.pdf" class="text-uppercase"><p>Download my
+                                    CV <img style="width: 28px" src="/public/images/strelka.gif"></p></a></br>
+
                             <!--<span class="p-date">February 15, 2016</span>-->
                         </div>
                     </div>
@@ -183,7 +187,8 @@ PublicAsset::register($this);
             <div class="row">
                 <div class="col-md-12">
                     <div class="text-center">&copy; 2017 <a href="#"> </a> Built with <i
-                                class="fa fa-heart"></i> by <a href="https://www.facebook.com/denys.pokatilov">Pokatilov Denys</a>
+                                class="fa fa-heart"></i> by <a href="https://www.facebook.com/denys.pokatilov">Pokatilov
+                            Denys</a>
                     </div>
                 </div>
             </div>
