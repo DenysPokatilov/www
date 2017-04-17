@@ -50,13 +50,13 @@ PublicAsset::register($this);
 
                     </li>
                 </ul>
-                <div class="i_con">
-                    <ul class="nav navbar-nav text-uppercase">
+<!--                <div class="i_con">-->
+<!--                    <ul class="nav navbar-nav text-uppercase">-->
                         <?php if (Yii::$app->user->isGuest): ?>
 
-                           <!-- --><?php /*ActiveForm::begin(
+                            <?php ActiveForm::begin(
                                     [
-                                        'action'=>['/search'],
+                                        'action'=>['site/search'],
                                         'method'=>'post',
                                         'options'=>[
                                                 'class=> navbar-form navbar-left'
@@ -84,7 +84,7 @@ PublicAsset::register($this);
                             );
                             echo '<span></div>';
                             ActiveForm::end();
-                            */?>
+                            ?>
 
 
                             <li style="float: right; padding: 0px 30px"><a href="<?= Url::toRoute(['auth/login']) ?>">Login</a></li>
@@ -97,8 +97,8 @@ PublicAsset::register($this);
                             )
                             . Html::endForm() ?>
                         <?php endif; ?>
-                    </ul>
-                </div>
+<!--                    </ul>-->
+<!--                </div>-->
 
             </div>
             <!-- /.navbar-collapse -->

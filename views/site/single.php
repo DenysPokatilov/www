@@ -1,9 +1,7 @@
 <?php
 use yii\helpers\Url;
 use yii\widgets\LinkPager;
-
 ?>
-
 <!--main content start-->
 
 
@@ -19,7 +17,7 @@ use yii\widgets\LinkPager;
                     <div class="post-content">
                         <header class="entry-header text-center text-uppercase">
                             <h6>
-                                <a href="<?= Url::toRoute(['/site/category', 'id' => $article->category->id]) ?>"><?= $article->category->title ?></a>
+                                <a href="/site/category?id=<?=$article->category->id?>"><?= $article->category->title ?></a>
                             </h6>
 
                             <h1 class="entry-title"><a
@@ -50,6 +48,9 @@ use yii\widgets\LinkPager;
                         </div>
                     </div>
                 </article>
+                Тег: <?php foreach ($article->tags as $tag):?>
+                    <?= $tag->title ?>
+                <?php endforeach; ?>
             <?= $this->render('/partials/comment',[
                     'article'=>$article,
                     'comments'=>$comments,
