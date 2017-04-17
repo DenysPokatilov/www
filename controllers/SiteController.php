@@ -41,6 +41,17 @@ class SiteController extends Controller
         ];
     }
 
+    public function actionSearch()
+    {
+        $search = Yii::$app->request->post('search');
+        return $this->render(
+            'search', [
+                'search'=> $search,
+            ]
+
+        );
+    }
+
     /**
      * @inheritdoc
      */
@@ -107,13 +118,11 @@ class SiteController extends Controller
     {
         $model = new CommentForm();
 
-        if(Yii::$app->request->isPost)
-        {
+        if (Yii::$app->request->isPost) {
             $model->load(Yii::$app->request->post());
-            if($model->saveComment($id))
-            {
-                Yii::$app->getSession()->setFlash('comment','Your comment will be added after modaration of admin!');
-                return $this->redirect(['site/view','id'=>$id]);
+            if ($model->saveComment($id)) {
+                Yii::$app->getSession()->setFlash('comment', 'Your comment will be added after modaration of admin!');
+                return $this->redirect(['site/view', 'id' => $id]);
             }
         }
     }
@@ -144,7 +153,7 @@ class SiteController extends Controller
             'recent' => $recent,
             'categories' => $categories,
             'comments' => $comments,
-            'commentForm' => $commentForm,ed
+            'commentForm' => $commentForm, ed
 
         ]);
     }
@@ -164,4 +173,6 @@ class SiteController extends Controller
             'categories' => $categories,
         ]);
     }
+
+
 }

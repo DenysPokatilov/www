@@ -266,7 +266,7 @@ header
 .nav > li > a {
     position: relative;
     display: block;
-    padding: 15px 30px;
+    padding: 0px 30px;
     font-size: 12px;
     letter-spacing: 1px;
 }

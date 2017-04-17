@@ -10,6 +10,7 @@ use yii\bootstrap\NavBar;
 use yii\helpers\Url;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use yii\bootstrap\ActiveForm;
 
 PublicAsset::register($this);
 ?>
@@ -52,8 +53,42 @@ PublicAsset::register($this);
                 <div class="i_con">
                     <ul class="nav navbar-nav text-uppercase">
                         <?php if (Yii::$app->user->isGuest): ?>
-                            <li><a href="<?= Url::toRoute(['auth/login']) ?>">Login</a></li>
-                            <li><a href="<?= Url::toRoute(['auth/signup']) ?>">Register</a></li>
+
+                           <!-- --><?php /*ActiveForm::begin(
+                                    [
+                                        'action'=>['/search'],
+                                        'method'=>'post',
+                                        'options'=>[
+                                                'class=> navbar-form navbar-left'
+                                        ]
+
+                                    ]
+                            );
+                            echo '<div style="width: 20%; float: right" class= "input-group input-group-sm">';
+                            echo Html::input(
+                                    'text',
+                                'search',
+                                '',
+                                [
+                                        'placeholder'=>'Найти....',
+                                        'class'=> 'form-control',
+                                ]
+
+                            );
+                            echo  '<span class="input-group-btn">';
+                            echo Html::submitButton(
+                                    '<span class="glyphicon glyphicon-search"></span>',
+                                [
+                                        'class'=> 'btn btn-succes'
+                                ]
+                            );
+                            echo '<span></div>';
+                            ActiveForm::end();
+                            */?>
+
+
+                            <li style="float: right; padding: 0px 30px"><a href="<?= Url::toRoute(['auth/login']) ?>">Login</a></li>
+                            <li style="float: right"><a href="<?= Url::toRoute(['auth/signup']) ?>">Register</a></li>
                         <?php else: ?>
                             <?= Html::beginForm(['/auth/logout'], 'post')
                             . Html::submitButton(
